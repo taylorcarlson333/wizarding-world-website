@@ -87,6 +87,38 @@ body {
   .book-card {
     width: 90%;
   }
+
+ .nav {
+    flex-direction: column;
+    gap: 8 px;
+    padding: 16px;
+    max-width: 100%;
+  }
+
+  .nav a {
+    text-align: center;
+  }
+
+  .characters_heading {
+    margin: 20px 0;
+    padding: 0 15px;
+  }
+  
+  .characters_heading h1 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .characters_row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .characters_column {
+    flex: none;
+    width: 90%;
+    max-width: 300px;
+  }
 }
 
 .nav {
@@ -311,6 +343,13 @@ body {
 .characters_heading {
   text-align: center;
   margin: 30px 0;
+  padding: 0 10px;
+}
+
+.characters_heading h1 {
+  font-size: 2rem;
+  word-wrap: break-word;
+  line-height: 1.2;
 }
 
 .characters_row {
@@ -327,6 +366,18 @@ body {
   perspective: 1000px;
   position: relative;
   height: 300px;
+}
+
+.characters_column h2 {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  padding: 5px;
+  opacity: 0.8; 
+  z-index: 3;
 }
 
 .characters_column h2 {
