@@ -307,3 +307,114 @@ body {
     height: auto;
   }
 }
+
+.characters_heading {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.characters_row {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.characters_column {
+  flex: 33.33%;
+  padding: 5px;
+  perspective: 1000px;
+  position: relative;
+  height: 300px;
+}
+
+.characters_column h2 {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  padding: 5px;
+  opacity: 0.8; 
+  z-index: 3;
+}
+
+.characters_column p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  text-align: center;
+  font-size: 14px;
+}
+
+.characters_column:hover p {
+  opacity: 1;
+}
+
+.flip-box {
+  height: 300px;
+  width: 300px;
+  perspective: 1000px;
+  position: relative;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: white;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.flip-box-front img {
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.flip-box-back {
+  color: white;
+  transform: rotateY(180deg);
+}
+
